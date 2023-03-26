@@ -1,0 +1,39 @@
+1. Is the Python Standard Library included with PyInputPlus?
+Ans-
+No, pyinputplus in thirds party library which provides additional feature to take input from python , it may take some modules from python standered library .
+But it does not include entire library.
+pyinputplus provides many feature to take input like input handilng , input validation and time out for input prompt.
+
+2. Why is PyInputPlus commonly imported with import pyinputplus as pypi?
+Ans-
+Pyinputplus is imported as pypi beacuse it give easy way to metion in code and function while writing and which makes code more readable and maintenable.
+and that also avoids conflicts in writing code.
+
+3. How do you distinguish between inputInt() and inputFloat()?
+Ans-
+Here both are function of pyinputplus but both gives different access of work as belo 
+inpitInt() - given limit to user to enter only integer while data will be more accurate and confilctsless when you need integer as input.
+inputFloat() gives you access to limit user to enter only Floating point number to make your data more desireable and easy to readable for machine and human.
+
+4. Using PyInputPlus, how do you ensure that the user enters a whole number between 0 and 99?
+Ans-
+We can use below code or we can defire this code as function for set user to enter number between 0 to 99.
+
+import pyinputplus as pyip
+
+number = pyip.inputInt(prompt="Enter a whole number between 0 and 99: ", min=0, max=99)
+
+5. What is transferred to the keyword arguments allowRegexes and blockRegexes?
+Ans- Here with above function we can provide a restricted limit to user to provide the input or we can block unwanted input by using 
+below.
+allowRegex()- here we can provide only wanted input which we are expacting from user else we can hold the opration 
+blockRegex() - here we can provide an restriction to limit the user input with unwanted input.
+
+6. If a blank input is entered three times, what does inputStr(limit=3) do?
+Ans- In inputStr() limit provide maximum access to attempt to give input, and if user fails to do so then input prompt will be time out.
+this is used  to apply in sensitive cases like passward , pin or confidetial data.
+
+7. If blank input is entered three times, what does inputStr(limit=3, default=&#39;hello&#39;) do?
+Ans-
+Here in this case after exceeding the limit of input , pyinputplus will return "Hello" as default print has given instead of "Timeoutexception"
+
